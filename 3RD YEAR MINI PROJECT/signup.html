@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login page</title>
+  <title>signup page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
         background: rgb(27, 27, 199)
     }
 
-    .login{
+    .signup{
         width: 360px;
         height: min-content;
         padding: 20px;
@@ -30,19 +30,19 @@
         background: white;
     }
 
-    .login h1{
+    .signup h1{
         font-size: xx-large;
         margin-bottom: 25px;
     }
 
-    .login form{
+    .signup form{
         font-size: 20px;
 
     }
-    .login form .form-group{
+    .signup form .form-group{
         margin-bottom: 10px;
     }
-    .login form input[type="submit"]{
+    .signup form input[type="submit"]{
         font-size: 20px;
         margin-top: 15px;
     }
@@ -51,9 +51,9 @@
   </style>
 </head>
 <body>
-<!-- <h1>Hello-Bootstrap</h1> -->
-<div class="login">
-    <h1 class="text-center">Log Into Your Account</h1>
+
+<div class="signup">
+    <h1 class="text-center">Signup For Python Babies</h1>
 
     <form class="needs-validation was-validated">
         <div class="form-group">
@@ -70,12 +70,16 @@
                 Please enter your password
             </div>
         </div>
-
         <div class="form-group">
-            <input type="checkbox" id="checkbox">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <input class="form-control" type="confirm-password" id="confirm-password" minlength="8" required>
+            <div class="invalid-feedback">
+                Passwords do not match
+            </div>
         </div>
-        <p>Don't have an account? &nbsp;<a href="./signup.html">sign up</a></p>
-        <input type="submit" value="LOG IN" class="btn btn-success w-100 ">
+
+        
+        <input type="submit" value="Sign Up" class="btn btn-success w-100 ">
     </form>
 </div>
 </body>
