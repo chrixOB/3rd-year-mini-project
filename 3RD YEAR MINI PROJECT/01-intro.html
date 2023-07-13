@@ -13,6 +13,41 @@
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+
+  <style>
+    #one{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition: 0.3s ease-out;
+}
+
+#one div{
+    color: rgb(94, 94, 230);
+}
+
+.level-sidebar__chapter__count:hover{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition:  ease-out;
+}
+*{
+    /* border: 1px solid white; */
+}
+h1{
+    text-align: center;
+}
+.main{
+    margin-left: 80px;
+    background: gray;
+}
+#inner-div{
+    margin: 50px;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+  </style>
 </head>
 <body>
     <div class="container">
@@ -48,18 +83,18 @@
             <div class="level-sidebar__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closemenu()"></i> <span>LEVELS</span></div>
             <div class="level-sidebar__head">
                 <div class="LA"></div> <i class="fa-brands fa-python"></i>
-                <span class="LP">LEARN PYTHON </span>
+                <span class="LP">PYTHON BABIES </span>
             </div>
 
             <div class="level-sidebar__title">
                 <p class="first-paragraph">chapter 1</p>
                 <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
             </div>
-            <a href="./01-intro.html" class="level-sidebar__chapter__count">
-                <div class="count__number">01</div>
+            <a class="level-sidebar__chapter__count" id="one">
+                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41);">01</div>
                 <div class="description">Intro: What is python?</div>
             </a>
-            <div class="level-sidebar__chapter__count">
+            <div class="level-sidebar__chapter__count" id="two">
                 <div class="count__number">02</div>
                 <div class="description">
                 Getting started: installation
@@ -130,6 +165,62 @@
 
         <!-- account sidebar ends here -->
         <div class="main">
+            <div id="inner-div">
+                <h1>PYTHON INTRODUCTION</h1>
+            <p></p>
+            <p></p>
+            <h3>What is python?</h3>
+            <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+
+                It is used for:</p>
+                <ol>
+                    <li>Web development(server-side),</li>
+                    <li>software development,</li>
+                    <li>system scripting,</li>
+                    <li>mathematics</li>
+
+                </ol>
+                <br>
+                What can Python do?
+
+    <li>Python can be used on a server to create web applications.</li>
+    <li>Python can be used alongside software to create workflows.</li>
+    <li>Python can connect to database systems. It can also read and modify files.</li>
+    <li>Python can be used to handle big data and perform complex mathematics.</li>
+    <li>Python can be used for rapid prototyping, or for production-ready software development.</li>
+    <br>
+    Why Python?
+    <br>
+    <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+    <li>Python has a simple syntax similar to the English language.</li>
+    <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+    <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+    <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
+
+    <br>
+    <br>
+Good to know
+<br>
+<br>
+
+    The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.
+    In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.
+<br>
+<br>
+Python Syntax compared to other programming languages
+<br>
+<br>
+
+    <li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+    <li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
+    <li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
+
+                
+
+            </div>
+            
+
+
             
         </div>
     </div>
