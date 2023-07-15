@@ -14,14 +14,14 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
 <style>
-    #two{
+    #three{
     background: rgb(31, 19, 41);
     cursor: pointer;
     border: 2px solid rgb(94, 94, 230);
     transition: 0.3s ease-out;
 }
 
-#two div{
+#three div{
     color: rgb(94, 94, 230);
 }
 
@@ -53,6 +53,21 @@ h1{
 .code{
     background: rgb(93, 93, 156);
     color: antiquewhite;
+}
+.example{
+    background: rgb(65, 143, 153);
+    padding: 30px;
+    border-radius: 10px;
+}
+.example-error{
+    background: rgb(192, 75, 75);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+.example-inner{
+    background: white;
+    padding: 7px;
 }
 </style>
 
@@ -92,8 +107,7 @@ h1{
             <div class="level-sidebar__head">
                 <div class="LA"></div> <i class="fa-brands fa-python"></i>
                 <span class="LP">LEARN PYTHON </span>
-            </div>
-
+            </dia
             <div class="level-sidebar__title">
                 <p class="first-paragraph">chapter 1</p>
                 <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
@@ -103,51 +117,51 @@ h1{
                 <div class="description">Intro: What is python?</div>
             </a>
             <a href="./02-getting-started.html" class="level-sidebar__chapter__count" id="two">
-                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41);">02</div>
+                <div class="count__number">02</div>
                 <div class="description">
                 Getting started: installation
                 </div>
             </a>
-            <a href="./03-py-syntax.html" class="level-sidebar__chapter__count">
-                <div class="count__number">03</div>
+            <a href="./03-py-syntax.html" class="level-sidebar__chapter__count" id="three">
+                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41);">03</div>
                 <div class="detailed-description">
                     <p class="des">Python Syntax</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="./04-variables.html" class="level-sidebar__chapter__count">
+            <a  href="./04-variables.html" class="level-sidebar__chapter__count" id="four">
                 <div class="count__number">04</div>
                 <div class="detailed-description">
                     <p class="des">Variables</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="." class="level-sidebar__chapter__count">
+            <a href="" class="level-sidebar__chapter__count">
                 <div class="count__number">05</div>
                 <div class="detailed-description">
                     <p class="des">Comments</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <div class="level-sidebar__chapter__count">
+            <a href="" class="level-sidebar__chapter__count">
                 <div class="count__number">06</div>
                 <div class="detailed-description">
                     <p class="des">Data types</p>
                     <p class="detail"></p>
                 </div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+            </a>
+            <a href="" class="level-sidebar__chapter__count">
                 <div class="count__number">07</div>
                 <div class="description">Numbers</div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+            </a>
+            <a href="" class="level-sidebar__chapter__count">
                 <div class="count__number">08</div>
                 <div class="description">Casting</div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+            </a>
+            <a href="" class="level-sidebar__chapter__count">
                 <div class="count__number">09</div>
                 <div class="description">Strings</div>
-            </div>
+            </a>
             
 
         </div>
@@ -174,59 +188,103 @@ h1{
         <!-- account sidebar ends here -->
         <div class="main">
             <div class="inner-div">
-            <h1>Python Install</h1>
-<br>
 
-Many PCs and Macs will have python already installed.
-<br>
-<br>
-To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):
-<br>
-<br>  
+                <h1>PYTHON SYNTAX</h1>
+                <p>Syntax refers to the rules that define the combinations of symbols that are 
+                    considered to be correctly structured statements or expressions in that language</p><br>
 
-<div class="command">C:\Users\Your Name>python --version</div>
-<br>
+                <p>Python has a very simple syntax which makes it an ideal language for beginners in programming</p><br>
 
-<p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
-<br>
-<div class="command">python --version</div>
-<br>
-<p>
-    If you find that you do not have Python installed on your computer, 
-    then you can download it for free from the following website: https://www.python.org/
-</p>
-<br>
-<p>
-    All python files have to be saved with the extension "py". thus filename.py (example is hello.py).
-    this way, the python interpreter can recognise and execute the files. 
-</p>
-<br>
-<p>
-    The way to run a python file is like this on the command line:<br>
-    <br>
+                <li>It is not case-sensitive. This means that "print", "Print" and "PRINT" 
+                    are all considered to be the same even though capitalization has made them look different.
+                    Python does not respect capitalization.
+                </li><br>
+                <li>
+                    It doesn't use a semi-colon at the end of each statement. 
+                    Languages like java and c++ use semi-colons to mark the  end of an executable statement. 
+                    Omitting the semi-colon in such languages leads to generation of syntax error but python does not do that.
+                </li><br>
 
-    <div class="command">C:\Users\Your Name>python helloworld.py</div>
-</p>
-<br>
-<p>
-    Let's write our first Python file, called helloworld.py, which can be done in any text editor.
-    <br>
-</p>
-<br>
-<div class="code">print("hello, world!")</div>
-<br>
-<p>
-    Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:
-</p>
-<br>
-<div class="command">C:\Users\Your Name>python helloworld.py </div><br>
+                <!-- <h1>TALK ABOUT CASE SENSITIVITY AND SIMPLE ENGLISH STRUCTURE</h1> -->
+                <!-- <h1>USE OF NO SEMI COLONS AT THE END OF EACH STATMENT</h1> -->
+                <h1>
+                    PYTHON INDENTATION
+                </h1>
+                
+                <p>
+                    Indentation refers to the spaces at the beginning of a code line.
+                </p>
+                <br>
+                <p>
+                    Where in other programming languages the indentation in code is for readability only,
+                     the indentation in Python is very important.
+                </p>
+                <br>
+                <p>
+                    Python uses indentation to indicate a block of code.
+                </p>
+                <br>
+                <div class="example">
+                    <p><h4>Example</h4></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>if 5 > 2:</p>
+                        <p>&nbsp; &nbsp; print("Five is greater than two!")</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <p>Python will give you an error if you skip the indentation</p>
+                <br>
+                <div class="example-error">
+                    <p><h4>Example</h4></p>
+                    <br>
+                    <p><b>syntax error</b></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>if 5 > 2:</p>
+                        <p>print("Five is greater than two!")</p>
+                    </div>
+                    <br>
+                </div>
 
-<p>The output should read:</p><br>
-<div class="command">hello, world!</div><br>
+                <br>
+                <p>The number of spaces is up to you as a programmer, 
+                the most common use is four, but it has to be at least one.<br>
+                Pressing the tab key to indent is also helpful as this gives you a reasonable amount of white space
+                </p><br>
+                <div class="example">
+                    <p><h4>Example</h4></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>if 5 > 2:</p>
+                        <p>&nbsp; &nbsp; print("Five is greater than two!")</p>
+                        <p>if 5 > 2:</p>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; print("Five is greater than two!")</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
 
-Congratulations, you have written and executed your first Python program.
+                <p>You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:</p>
+                <br>
 
-</div>         
+                <div class="example-error">
+                    <p><h4>Example</h4></p>
+                    <br>
+                    <p><b>syntax error</b></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>if 5 > 2:</p>
+                        <p>&nbsp; &nbsp;print("Five is greater than two!")</p>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; print("Five is greater than two!")</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+
+            </div>         
         </div>
     </div>
     <script>
