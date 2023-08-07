@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn python</title>
     <link href="./styles.css" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
@@ -36,6 +36,7 @@
     font-size: x-large;
     /* text-align: center; */
     background: gray;
+    width: fit-content;
 }
 
 .inner-div{
@@ -54,6 +55,39 @@ h1{
     background: rgb(93, 93, 156);
     color: antiquewhite;
 }
+.editor{
+    background: black;
+    color: white;
+    text-align:start;
+    height: 250px;
+    width: 100%;
+    font-size: x-large;
+    outline: none;
+    /* border: ; */
+    /* padding: 10px; */
+}
+.console{
+    background: black;
+    color: white;
+    height: 200px;
+    width: 100%;
+    font-size: x-large;
+    padding: 15px;
+}
+
+.run{
+    width: 100px;
+    height: 40px;
+    background: rgb(56, 224, 56);
+    color: whitesmoke;
+    position: absolute;
+    transform: translate(-100px,0px);
+    font-size: 1rem;
+}
+.run:hover{
+    cursor: pointer;
+    color: black;
+}
 </style>
 
 </head>
@@ -62,7 +96,8 @@ h1{
         <div class="nav">
             <div class="nav__top">
                 <a href="#" class="nav__top__logo">
-                    <div><i class="fa-brands fa-star" id="py-logo"></i></div>
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
                     <!-- <div>Levels</div> -->
                 </a>
                 <a href="#" class="nav__top__levels">
@@ -122,32 +157,39 @@ h1{
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="." class="level-sidebar__chapter__count">
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count">
                 <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count">
+                <div class="count__number">06</div>
                 <div class="detailed-description">
                     <p class="des">Comments</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <div class="level-sidebar__chapter__count">
-                <div class="count__number">06</div>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count">
+                <div class="count__number">07</div>
                 <div class="detailed-description">
                     <p class="des">Data types</p>
                     <p class="detail"></p>
                 </div>
-            </div>
-            <div class="level-sidebar__chapter__count">
-                <div class="count__number">07</div>
-                <div class="description">Numbers</div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+            </a>
+            <a href="./08-casting.html" class="level-sidebar__chapter__count">
                 <div class="count__number">08</div>
-                <div class="description">Casting</div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+                <div class="description">casting</div>
+            </a>
+            <a href="./09-strings.html" class="level-sidebar__chapter__count">
                 <div class="count__number">09</div>
-                <div class="description">Strings</div>
-            </div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
+            </a>
             
 
         </div>
@@ -157,7 +199,8 @@ h1{
         <!-- display username -->
         <div class="display-user" style="background: blue;">
             <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
-            <div class="icon"><i class="fa-solid fa-user"></i></div><span>Roberto</span>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span id="displayName"
+            style="font-size: large;">Roberto</span>
         </div>>
 
         </div>
@@ -223,8 +266,29 @@ To check if you have python installed on a Windows PC, search in the start bar f
 
 <p>The output should read:</p><br>
 <div class="command">hello, world!</div><br>
+<br>
+<p>Now let us try it here with our own text editor and console</p>
+<br>
+<p>Type this: print('hello world') inside the code editor below and click run to view your output</p>
+<br>
 
+<div>
+    <label for="inputText">PYTHON EDITOR</label>
+    <textarea type="text" class="editor" id="inputText">
+
+
+    </textarea>
+    <button class="run" onclick="compareAndPrint()">RUN CODE</button>
+    </div>
+
+    <br>
+    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">OUTPUT</h2>
+    <div class="console" id="con">
+
+    </div>
+    <br>
 Congratulations, you have written and executed your first Python program.
+<br><br>
 
 </div>         
         </div>
@@ -250,7 +314,39 @@ Congratulations, you have written and executed your first Python program.
         function openaccount(){
             acc.style.display = "block";
         }
+
+
+        //get username via prompt and display at top right
+        let displayName = document.getElementById("displayName");
+        let userName = window.prompt("Please create a username");
+        displayName.innerHTML = "hello, " + userName.toUpperCase();
+
         
+        
+
+
+        function compareAndPrint(){
+            var userInput = document.getElementById("inputText").value;
+            var con = document.getElementById("con");
+
+            var expectedValue1 = "print('hello world')";
+            // var expectedValue2 = "print("hello world")";
+
+            //white space in the textarea causes the userinput to be different from expectedValue when it  is same.
+            if(userInput === expectedValue1){
+                console.log(userInput);
+                console.log("hello world");
+                con.innerHTML = "hello world";
+                con.style.color = "white";
+            }
+            
+            else{
+                console.log(userInput);
+                console.log("syntax error");
+                con.innerHTML = "syntax error";
+                con.style.color = "red";
+            }
+        }
     </script>
     
 </body>

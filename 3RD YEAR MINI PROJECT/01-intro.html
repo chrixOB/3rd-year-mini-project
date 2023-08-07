@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn python</title>
     <link href="./styles.css" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
@@ -32,6 +32,15 @@
     border: 2px solid rgb(94, 94, 230);
     transition:  ease-out;
 }
+.display-user{
+    transform: translateX(1220px);
+    height: fit-content;
+    width: 125px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    /* position: fixed; */
+}
 
 h1{
     text-align: center;
@@ -39,6 +48,7 @@ h1{
 .main{
     margin-left: 80px;
     background: gray;
+    margin-top: 100px;
 }
 #inner-div{
     margin: 50px;
@@ -52,7 +62,8 @@ h1{
         <div class="nav">
             <div class="nav__top">
                 <a href="#" class="nav__top__logo">
-                    <div><i class="fa-brands fa-star" id="py-logo"></i></div>
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
                     <!-- <div>Levels</div> -->
                 </a>
                 <a href="#" class="nav__top__levels">
@@ -88,7 +99,7 @@ h1{
                 <p class="first-paragraph">chapter 1</p>
                 <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
             </div>
-            <a class="level-sidebar__chapter__count" id="one">
+            <a class="level-sidebar__chapter__count" id="one" onclick="openmenu()">
                 <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41);">01</div>
                 <div class="description">Intro: What is python?</div>
             </a>
@@ -112,32 +123,40 @@ h1{
                     <p class="detail"></p>
                 </div>
             </a>
-            <a class="level-sidebar__chapter__count">
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count">
                 <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count">
+                <div class="count__number">06</div>
                 <div class="detailed-description">
                     <p class="des">Comments</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a class="level-sidebar__chapter__count">
-                <div class="count__number">06</div>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count">
+                <div class="count__number">07</div>
                 <div class="detailed-description">
                     <p class="des">Data types</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a class="level-sidebar__chapter__count">
-                <div class="count__number">07</div>
-                <div class="description">Numbers</div>
-            </a>
-            <div class="level-sidebar__chapter__count">
+            <a href="./08-casting.html" class="level-sidebar__chapter__count">
                 <div class="count__number">08</div>
-                <div class="description">Casting</div>
-            </div>
-            <div class="level-sidebar__chapter__count">
+                <div class="description">casting</div>
+            </a>
+            <a href="./09-strings.html" class="level-sidebar__chapter__count">
                 <div class="count__number">09</div>
-                <div class="description">Strings</div>
-            </div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
+            </a>
+
             
 
         </div>
@@ -147,9 +166,8 @@ h1{
         <!-- display username -->
         <div class="display-user" style="background: blue;">
             <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
-            <div class="icon"><i class="fa-solid fa-user"></i></div><span>Roberto</span>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span style="font-size: large;"></span>
         </div>>
-
         </div>
         <!-- end of display user name -->
 
@@ -243,7 +261,7 @@ Python Syntax compared to other programming languages
         function openaccount(){
             acc.style.display = "block";
         }
-        
+
     </script>
     
 </body>

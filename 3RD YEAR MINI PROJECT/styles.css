@@ -64,12 +64,15 @@ body{
 }
 
 .display-user{
-    transform: translateX(1240px);
+    transform: translateX(1220px);
     height: fit-content;
     width: 125px;
     display: flex;
     justify-content: space-around;
+    margin-top: 8px;
+    /* position: fixed; */
 }
+/* 1240px */
 .account__xlevels .fa-xmark{
     transform: translate(-95px,2px);
     cursor: pointer;

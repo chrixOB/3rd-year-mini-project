@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn python</title>
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+<style>
+    #eleven{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition: 0.3s ease-out;
+}
+
+#eleven div{
+    color: rgb(94, 94, 230);
+}
+
+
+.point{
+    margin-bottom: 20px;
+}
+.level-sidebar__chapter__count:hover{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition:  ease-out;
+}
+
+.main{
+    font-size: x-large;
+    background: gray;
+    width: fit-content;
+    height: fit-content;
+}
+.inner-div{
+    margin: 50px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.example{
+    background: rgb(65, 143, 153);
+    padding: 30px;
+    border-radius: 10px;
+}
+.example-error{
+    background: rgb(192, 75, 75);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+.example-inner{
+    background: white;
+    padding: 7px;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav__top">
+                <a href="#" class="nav__top__logo">
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
+                    <!-- <div>Levels</div> -->
+                </a>
+                <a href="#" class="nav__top__levels">
+                    <div onclick="openmenu()"><i class="fa-solid fa-bars" onclick="openmenu()"></i></div>
+                    <div onclick="openmenu()">Levels</div>
+                </a>
+                <a href="#" class="nav__top__option">
+                    <div><i class="fa-solid fa-sliders"></i></div>
+                    <div>Options</div>
+                </a>
+            </div>
+            <!-- <div class="nav__bottom" style="margin-bottom: 20px;"> -->
+                
+                <a href="#" class="nav__bottom__accounts" style="margin-bottom: 0; width: 100%; height: 75px;"onclick="openaccount()">
+                    <i class="fa-regular fa-user" onclick="openaccount()"></i>
+                    <div onclick="openaccount()">account</div>
+
+                </a>
+                
+            <!-- </div> -->
+        </div>
+        
+
+        <!-- levels side bar -->
+        <div class="level-sidebar">
+            <div class="level-sidebar__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closemenu()"></i> <span>LEVELS</span></div>
+            <div class="level-sidebar__head">
+                <div class="LA"></div> <i class="fa-brands fa-python"></i>
+                <span class="LP">LEARN PYTHON </span>
+            </div>
+            <div class="level-sidebar__title">
+                <p class="first-paragraph">chapter 1</p>
+                <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
+            </div>
+            <a href="./01-intro.html" class="level-sidebar__chapter__count">
+                <div class="count__number">01</div>
+                <div class="description">Intro: What is python?</div>
+            </a>
+            <a href="./02-getting-started.html" class="level-sidebar__chapter__count" id="two">
+                <div class="count__number">02</div>
+                <div class="description">
+                Getting started: installation
+                </div>
+            </a>
+            <a href="./03-py-syntax.html" class="level-sidebar__chapter__count" id="three">
+                <div class="count__number">03</div>
+                <div class="detailed-description">
+                    <p class="des">Python Syntax</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a  href="./04-variables.html" class="level-sidebar__chapter__count" id="four">
+                <div class="count__number">04</div>
+                <div class="detailed-description">
+                    <p class="des">Variables</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count" id="five">
+                <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count">
+                <div class="count__number">06</div>
+                <div class="detailed-description">
+                    <p class="des">Comments</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count">
+                <div class="count__number">07</div>
+                <div class="detailed-description">
+                    <p class="des">Data types</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./08-casting.html" class="level-sidebar__chapter__count">
+                <div class="count__number">08</div>
+                <div class="description">casting</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count" id="ten">
+                <div class="count__number" >09</div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
+            </a>
+            <a href="./11-getting-user-input.html" class="level-sidebar__chapter__count" id="eleven">
+                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41)">11</div>
+                <div class="description">Getting User Input</div>
+            </a>
+            
+
+        </div>
+
+        <!-- levels side bar end here -->
+
+        <!-- display username -->
+        <div class="display-user" style="background: blue;">
+            <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span style="font-size: large;">Roberto</span>
+        </div>
+
+        </div>
+        <!-- end of display user name -->
+
+        <!-- account sidebar begins -->
+        <div class="account">
+            <div class="account__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closeaccount()"></i> <span>ACCOUNT</span></div>
+            <div class="account__head">Sign out</div>
+
+
+        </div>
+
+        <!-- account sidebar ends here -->
+        <div class="main">
+            <div class="inner-div">
+                <h1>GETTING USER INPUT</h1>
+            <p class="point">In previous chapters, we have leanrt how to display text and other results to the user using the  
+                Print() function. In this chapter we are going to look at how to take user input and use it for various 
+                computations and other purposes.</p>
+            <p class="point">Taking user input in python is simple. We use the input() function to achieve this purpose</p>
+
+            <p class="point">The input() function is a built-in function in python just like the print() function. 
+                This means that the user does not have to create the function himself but will just have to call it when needed. 
+            </p>
+            <p class="point">The parameter we put inside the input function is the text we want to display to the user
+                Once the user presses the enter key, the value is returned. We typically store user input in our variable
+                so that we can use the information in our program.
+            </p>
+
+            <p class="point"><b>Lets demostrate with an example</b></p>
+
+            <div class="example">
+                <p><h4>Example of user input code</h4></p>
+                <br>
+                <div class="example-inner">
+                    <p>first_name = input("What is your first name")</p>
+                    <p>sur_name = input("What is your surname")</p>
+                    <p style="color: gray;">#Lets concatenate to get the full name</p>
+                    <p>full_name = (first_name + " " + sur_name)</p>
+                    <p>print(full_name)</p>
+                </div>
+                <br>
+                <p class="point">Lets try the above example in the editor and see the output</p>
+
+                <iframe src="https://trinket.io/embed/python/fa95795d40" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </div>
+            <br>
+            <p><span><b><u>NB:</u></b></span>Please take note that python returns  the user input as a string even if the user
+                 enters a number and  therefore appropriate type casting has to be done when necessary. When yhe user inputs
+                a number and it is not converted to the appropriate number type, it could lead to complications when we attempt 
+                to do calculations with them.
+            </p>
+            <br>
+            <p class="point">Lets look at another example to demonstrate that.</p>
+            <div class="example">
+                <p><h4>Example of user input code</h4></p>
+                <br>
+                <div class="example-inner">
+                    <p>dob = int(input("What is your year of birth"))</p>
+                    <p>current_year = 2023</p>
+                    <p style="color: gray;">#Lets calculate your age</p>
+                    <p>user_age = (current_year - dob)</p>
+                    <p>print("You are" + " " +  user_age + " years old")</p>
+                </div>
+                <br>
+                
+                <iframe src="https://trinket.io/embed/python/fa95795d40" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <br>
+                <p class="point">We realise that when we run the code an error is generated which say a string and integer type cannot
+                    be concatenated. We fix this Error by using the str() function to convert the user_age variable to a string.
+                </p>
+                <br>
+
+                <p class="point">So now,go back to the code,make that change and viola!!!!  you are good to go.</p>
+            </div>
+            </div> 
+            
+
+
+        </div>
+    </div>
+    <script>
+        // const x = document.querySelector('#cross');
+        const side = document.querySelector('.level-sidebar');
+        const acc = document.querySelector('.account')
+
+        // x.addEventListener('click', closemenu);
+
+        function closemenu(){
+            side.style.display = "none";
+        }
+         
+        function openmenu(){
+            side.style.display = "block";
+        }
+        function closeaccount(){
+            acc.style.display = "none";
+        }
+         
+        function openaccount(){
+            acc.style.display = "block";
+        }
+        
+    </script>
+    <!-- <script src="quiz2.js"></script> -->
+    
+</body>
+</html>

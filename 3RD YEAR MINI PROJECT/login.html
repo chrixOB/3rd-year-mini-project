@@ -19,7 +19,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgb(27, 27, 199)
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(./assets/pythonweblogo.jpg);
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size:contain;
     }
 
     .login{
@@ -65,7 +68,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="password">Password</label>
-            <input class="form-control" type="password" id="password" minlength="8" required>
+            <input class="form-control" type="password" id="password" minlength="8" maxlength="14" required>
             <div class="invalid-feedback">
                 Please enter your password
             </div>

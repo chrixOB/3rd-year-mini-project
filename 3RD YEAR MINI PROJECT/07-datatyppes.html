@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn python</title>
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+<style>
+    #seven{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition: 0.3s ease-out;
+}
+
+#seven div{
+    color: rgb(94, 94, 230);
+}
+.comment{
+    color: gray;
+}
+.level-sidebar__chapter__count:hover{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition:  ease-out;
+}
+
+.main{
+    font-size: x-large;
+    /* text-align: center; */
+    background: gray;
+    width: auto;
+}
+
+.inner-div{
+    margin: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+.command{
+    background: black;
+    color: white;
+}
+.code{
+    background: rgb(93, 93, 156);
+    color: antiquewhite;
+}
+.example{
+    background: rgb(65, 143, 153);
+    padding: 30px;
+    border-radius: 10px;
+}
+.example-error{
+    background: rgb(192, 75, 75);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+.example-inner{
+    background: whitesmoke;
+    padding: 7px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav__top">
+                <a href="#" class="nav__top__logo">
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
+                    <!-- <div>Levels</div> -->
+                </a>
+                <a href="#" class="nav__top__levels">
+                    <div onclick="openmenu()"><i class="fa-solid fa-bars" onclick="openmenu()"></i></div>
+                    <div onclick="openmenu()">Levels</div>
+                </a>
+                <a href="#" class="nav__top__option">
+                    <div><i class="fa-solid fa-sliders"></i></div>
+                    <div>Options</div>
+                </a>
+            </div>
+            <!-- <div class="nav__bottom" style="margin-bottom: 20px;"> -->
+                
+                <a href="#" class="nav__bottom__accounts" style="margin-bottom: 0; width: 100%; height: 75px;"onclick="openaccount()">
+                    <i class="fa-regular fa-user" onclick="openaccount()"></i>
+                    <div onclick="openaccount()">account</div>
+
+                </a>
+                
+            <!-- </div> -->
+        </div>
+        
+
+        <!-- levels side bar -->
+        <div class="level-sidebar">
+            <div class="level-sidebar__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closemenu()"></i> <span>LEVELS</span></div>
+            <div class="level-sidebar__head">
+                <div class="LA"></div> <i class="fa-brands fa-python"></i>
+                <span class="LP">LEARN PYTHON </span>
+            </div>
+            <div class="level-sidebar__title">
+                <p class="first-paragraph">chapter 1</p>
+                <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
+            </div>
+            <a href="./01-intro.html" class="level-sidebar__chapter__count">
+                <div class="count__number">01</div>
+                <div class="description">Intro: What is python?</div>
+            </a>
+            <a href="./02-getting-started.html" class="level-sidebar__chapter__count" id="two">
+                <div class="count__number">02</div>
+                <div class="description">
+                Getting started: installation
+                </div>
+            </a>
+            <a href="./03-py-syntax.html" class="level-sidebar__chapter__count" id="three">
+                <div class="count__number">03</div>
+                <div class="detailed-description">
+                    <p class="des">Python Syntax</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a  href="./04-variables.html" class="level-sidebar__chapter__count" id="four">
+                <div class="count__number">04</div>
+                <div class="detailed-description">
+                    <p class="des">Variables</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count">
+                <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count" id="six">
+                <div class="count__number">06</div>
+                <div class="detailed-description">
+                    <p class="des">Comments</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count" id="seven">
+                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41);">07</div>
+                <div class="detailed-description">
+                    <p class="des">Data types</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./08-casting.html" class="level-sidebar__chapter__count">
+                <div class="count__number">08</div>
+                <div class="description">casting</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">09</div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
+            </a>
+        </div>
+
+        <!-- levels side bar end here -->
+
+        <!-- display username -->
+        <div class="display-user" style="background: blue;">
+            <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span style="font-size: large;">Roberto</span>
+        </div>>
+
+        </div>
+        <!-- end of display user name -->
+
+        <!-- account sidebar begins -->
+        <div class="account">
+            <div class="account__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closeaccount()"></i> <span>ACCOUNT</span></div>
+            <div class="account__head">Sign out</div>
+
+
+        </div>
+
+        <!-- account sidebar ends here -->
+        <div class="main">
+            <div class="inner-div">
+                <h1 style="margin-bottom: 30px;">
+                    DATA TYPES
+                </h1>
+                <p>In a previous chapter, we learnt about variables and it was said that they are containers for storing data </p>
+                <br>
+                <p>Variables store different types of data and these are what we refer to as data types</p>
+                <br>
+                <br>
+                <p>They are into categories and they are summarized in the table below</p>
+                <br>
+                <table  cellpadding="1"  cellspacing="15" style="  border: 3px solid black; padding: 10px; text-align: center;">
+                    <tr>
+                        <td style="font-weight: bold;">text type</td>
+                        <td>string</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">numeric types</td>
+                        <td>int</td>
+                        <td>float</td>
+                        <td>complex</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">sequence type</td>
+                        <td>list</td>
+                        <td>tuple</td>
+                        <td>range</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">mapping type</td>
+                        <td>dict</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">boolean type</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br>
+
+                <h3>Getting The Data Type</h3>
+                <br>
+                <p>You can get the data type of any variable by using the type() function</p>
+                <br>
+                <div class="example">
+                    <p><h4>Example</h4></p>
+                    <br>
+                    <p>Print the data type of the value y</p>
+                    <div class="example-inner">
+                        <p>y = 8</p>
+                        <p>print(type(y))</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                Now let us try that in the console below.
+                <br>
+                <br>
+                <iframe src="https://trinket.io/embed/python/fa95795d40" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
+
+
+
+        </div>
+    </div>
+    <script>
+        // const x = document.querySelector('#cross');
+        const side = document.querySelector('.level-sidebar');
+        const acc = document.querySelector('.account')
+
+        // x.addEventListener('click', closemenu);
+
+        function closemenu(){
+            side.style.display = "none";
+        }
+         
+        function openmenu(){
+            side.style.display = "block";
+        }
+        function closeaccount(){
+            acc.style.display = "none";
+        }
+         
+        function openaccount(){
+            acc.style.display = "block";
+        }
+        
+    </script>
+    
+</body>
+</html>

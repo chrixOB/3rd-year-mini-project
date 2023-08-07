@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn python</title>
     <link href="./styles.css" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
@@ -34,8 +34,8 @@
 
 .main{
     font-size: x-large;
-    /* text-align: center; */
     background: gray;
+    width: fit-content;
 }
 
 .inner-div{
@@ -69,6 +69,36 @@ h1{
     background: white;
     padding: 7px;
 }
+.editor{
+    background: black;
+    color: white;
+    text-align:start;
+    height: 250px;
+    width: 100%;
+    font-size: x-large;
+}
+.console{
+    background: black;
+    color: white;
+    height: 200px;
+    width: 100%;
+    font-size: x-large;
+    padding: 15px;
+}
+
+.run{
+    width: 100px;
+    height: 40px;
+    background: rgb(56, 224, 56);
+    color: whitesmoke;
+    position: absolute;
+    transform: translate(-100px,0px);
+    font-size: 1rem;
+}
+.run:hover{
+    cursor: pointer;
+    color: black;
+}
 </style>
 
 </head>
@@ -77,7 +107,10 @@ h1{
         <div class="nav">
             <div class="nav__top">
                 <a href="#" class="nav__top__logo">
-                    <div><i class="fa-brands fa-star" id="py-logo"></i></div>
+                    <!-- <div><i class="fa-brands fa-star" id="py-logo"></i></div> -->
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
+
                     <!-- <div>Levels</div> -->
                 </a>
                 <a href="#" class="nav__top__levels">
@@ -137,31 +170,38 @@ h1{
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="" class="level-sidebar__chapter__count">
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count">
                 <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count">
+                <div class="count__number">06</div>
                 <div class="detailed-description">
                     <p class="des">Comments</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="" class="level-sidebar__chapter__count">
-                <div class="count__number">06</div>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count">
+                <div class="count__number">07</div>
                 <div class="detailed-description">
                     <p class="des">Data types</p>
                     <p class="detail"></p>
                 </div>
             </a>
-            <a href="" class="level-sidebar__chapter__count">
-                <div class="count__number">07</div>
-                <div class="description">Numbers</div>
-            </a>
-            <a href="" class="level-sidebar__chapter__count">
+            <a href="./08-casting.html" class="level-sidebar__chapter__count">
                 <div class="count__number">08</div>
-                <div class="description">Casting</div>
+                <div class="description">casting</div>
             </a>
-            <a href="" class="level-sidebar__chapter__count">
+            <a href="./09-strings.html" class="level-sidebar__chapter__count">
                 <div class="count__number">09</div>
-                <div class="description">Strings</div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
             </a>
             
 
@@ -171,8 +211,8 @@ h1{
 
         <!-- display username -->
         <div class="display-user" style="background: blue;">
-            <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
-            <div class="icon"><i class="fa-solid fa-user"></i></div><span>Roberto</span>
+            <div class="notification"><i class="fa-solid fa-comment-medical" onclick="notify()"></i></div>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span style="font-size: large;">Roberto</span>
         </div>>
 
         </div>
@@ -189,6 +229,7 @@ h1{
         <!-- account sidebar ends here -->
         <div class="main">
             <div class="inner-div">
+                
 
                 <h1>VARIABLES</h1>
                 <p>Think of a variable as a container that stores something. for example, a cup for storing your coffee,
@@ -214,6 +255,12 @@ h1{
                     <li>set</li>
 
                 </ul>
+                <br>
+                <p>
+                    Before we begin learning about variables, let's take note of the this.
+                    Python has no command for declaring a variable. 
+                    A variable is created the moment you first assign a value to it.
+                </p>
 
                 <br>
                 <h4>1. Integer</h4>
@@ -238,7 +285,109 @@ h1{
                     <br>
                 </div>
                 <br>
+
                 
+                <h4>Let<sup>'</sup>s do some console work</h4>
+                <br>
+                <p><span>Instruction:</span>  click on the run button at the top right corner of the editor<br>
+                <!-- 2. Change the "hello, world" text inside the print() function to your name, click run see the results. -->
+                </p>
+                <br>
+                <div>
+                <textarea class="editor">
+            
+                    print("hello, world")
+                </textarea>
+                <button class="run" onclick="PrintHelloWorld()">RUN CODE</button>
+                </div>
+
+                <br>
+                <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">OUTPUT</h2>
+                <div class="console">
+
+                </div>
+                <!-- <button class="run">RUN CODE</button> -->
+
+                <br>
+                <h4>2. Float</h4>
+                <p>
+                    A python float variable allows you to store floating-point values or decimals.
+                </p><br>
+
+                
+                <div class="example">
+                    <p><h4>Example of float variable</h4></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>x = 5.7</p>
+                        <p>y = 89.99</p>
+                        <p>z= 3.67</p>
+                        <p style="background: rgb(235, 216, 182);">To print the above code ,
+                        we add these three lines to the ones above</p>
+                        <p>print("x =", y)</p>
+                        <p>print("y =", y)</p>
+                        <p>print("z =", z)</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                
+                <h4>3. String</h4>
+                <p>
+                    A string variable in Python allows us to store letters, words, or sentences.
+                    To declare a string variable, you must write the letter, word, or sentence in double quotes.
+                    The double quote is very important. without it, your string declaration is invalid and may generate a syntax error.
+                </p><br>
+
+                <div class="example">
+                    <p><h4>Example of string variable</h4></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>name = "Johnny"</p>
+                        <p>full_name = "Johnny English"</p>
+                        <p>position= "CIA detective"</p>
+                        <p style="background: rgb(235, 216, 182);">To print the above code ,
+                        we add these three lines to the ones above</p>
+                        <p>print("name =", name)</p>
+                        <p>print("full_name =", full_name)</p>
+                        <p>print("Position =", Position)</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <p>Taking a careful look at the above code, you'll see that the variable position was capitalized in
+                   the print() function but this will not affect the code in any way since we iniatially established
+                   the fact that python is not case-sensitive.
+                </p>
+                <br>
+
+                <br>
+                <h4>4. Boolean</h4>
+                <p>
+                    A boolean variable stores only two values, True or False. We use them for logical operations, 
+                    like checking if a condition is true or false. We don<sup>'</sup>t enter the true or false in quotes for 
+                    declaring a boolean as we do for strings.
+                </p><br>
+
+                
+                <div class="example">
+                    <p><h4>Example of boolean variable</h4></p>
+                    <br>
+                    <div class="example-inner">
+                        <p>x = true</p>
+                        <p>y = false</p>
+                        <!-- <p>z= 3.67</p> -->
+                        <p style="background: rgb(235, 216, 182);">To print the above code ,
+                        we add these three lines to the ones above</p>
+                        <p>print("x =", y)</p>
+                        <p>print("y =", y)</p>
+                        <p>print("z =", z)</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+
 
                 <div class="example-error">
                     <p><h4>Example</h4></p>
@@ -253,7 +402,7 @@ h1{
                     <br>
                 </div>
                 <br>
-
+                <iframe src="https://trinket.io/embed/python/fa95795d40" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
             </div>         
         </div>
@@ -281,6 +430,34 @@ h1{
         }
         
     </script>
+    <script>
+        let c = document.querySelector(".editor")
+        const console = document.querySelector(".console")
+
+    
+        function PrintHelloWorld(){
+            console.innerText = "hello, world";
+        }
+
+
+
+        c.addEventListener("keyup", function(){
+            if(c.value == "print"){
+                c.style.color = "yellow";
+                console.log(c.value);
+            }
+        })
+
+    </script>
+    <script>
+        
+        function notify(){
+            const notify_icon = document.getElementById("notify")
+            alert("UPCOMING QUIZ IN NEXT CHAPTER.")
+
+        }
+    </script>
+    
     
 </body>
 </html>

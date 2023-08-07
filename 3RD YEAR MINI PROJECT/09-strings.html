@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn python</title>
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4935d71cbd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+<style>
+    #nine{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition: 0.3s ease-out;
+}
+
+#nine div{
+    color: rgb(94, 94, 230);
+}
+.comment{
+    color: gray;
+}
+.level-sidebar__chapter__count:hover{
+    background: rgb(31, 19, 41);
+    cursor: pointer;
+    border: 2px solid rgb(94, 94, 230);
+    transition:  ease-out;
+}
+
+.main{
+    font-size: x-large;
+    /* text-align: center; */
+    background: gray;
+    width: auto;
+    height: fit-content;
+}
+
+.inner-div{
+    margin: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+.command{
+    background: black;
+    color: white;
+}
+.code{
+    background: rgb(93, 93, 156);
+    color: antiquewhite;
+}
+.example{
+    background: rgb(65, 143, 153);
+    padding: 30px;
+    border-radius: 10px;
+}
+.example-error{
+    background: rgb(192, 75, 75);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+.example-inner{
+    background: whitesmoke;
+    padding: 7px;
+}
+.editor,#InputIndex{
+    background: black;
+    color: white;
+    text-align:start;
+    height: 50px;
+    width: 100%;
+    font-size: x-large;
+    outline: none;
+    /* margin-left: 7px; */
+    /* border: ; */
+    padding-top: 10px;
+}
+.console{
+    background: black;
+    color: white;
+    height: 200px;
+    width: 100%;
+    font-size: x-large;
+    padding: 15px;
+}
+
+.run{
+    width: 100px;
+    height: 40px;
+    background: rgb(56, 224, 56);
+    color: whitesmoke;
+    position: absolute;
+    transform: translate(-100px,0px);
+    font-size: 1rem;
+}
+.run:hover{
+    cursor: pointer;
+    color: black;
+}
+</style>
+
+</head>
+<body>
+    <!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+      Launch demo modal
+    </button>
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">UPCOMING QUIZ IN NEXT CHAPTER</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+           
+        </div>
+      </div>
+    </div> -->
+    
+    <div class="container">
+        <div class="nav">
+            <div class="nav__top">
+                <a href="#" class="nav__top__logo">
+                    <div style="display: flex; align-items: center; justify-content: center; 
+                   padding-left: 63%;"><i class="fa-brands fa-python"></i></div>
+                    <!-- <div>Levels</div> -->
+                </a>
+                <a href="#" class="nav__top__levels">
+                    <div onclick="openmenu()"><i class="fa-solid fa-bars" onclick="openmenu()"></i></div>
+                    <div onclick="openmenu()">Levels</div>
+                </a>
+                <a href="#" class="nav__top__option">
+                    <div><i class="fa-solid fa-sliders"></i></div>
+                    <div>Options</div>
+                </a>
+            </div>
+            <!-- <div class="nav__bottom" style="margin-bottom: 20px;"> -->
+                
+                <a href="#" class="nav__bottom__accounts" style="margin-bottom: 0; width: 100%; height: 75px;"onclick="openaccount()">
+                    <i class="fa-regular fa-user" onclick="openaccount()"></i>
+                    <div onclick="openaccount()">account</div>
+
+                </a>
+                
+            <!-- </div> -->
+        </div>
+        
+
+        <!-- levels side bar -->
+        <div class="level-sidebar">
+            <div class="level-sidebar__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closemenu()"></i> <span>LEVELS</span></div>
+            <div class="level-sidebar__head">
+                <div class="LA"></div> <i class="fa-brands fa-python"></i>
+                <span class="LP">LEARN PYTHON </span>
+            </div>
+            <div class="level-sidebar__title">
+                <p class="first-paragraph">chapter 1</p>
+                <p class="second-paragraph" style="color:rgb(194, 145, 240);">INTRODUCTION AND BASICS</p>
+            </div>
+            <a href="./01-intro.html" class="level-sidebar__chapter__count">
+                <div class="count__number">01</div>
+                <div class="description">Intro: What is python?</div>
+            </a>
+            <a href="./02-getting-started.html" class="level-sidebar__chapter__count" id="two">
+                <div class="count__number">02</div>
+                <div class="description">
+                Getting started: installation
+                </div>
+            </a>
+            <a href="./03-py-syntax.html" class="level-sidebar__chapter__count" id="three">
+                <div class="count__number">03</div>
+                <div class="detailed-description">
+                    <p class="des">Python Syntax</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a  href="./04-variables.html" class="level-sidebar__chapter__count" id="four">
+                <div class="count__number">04</div>
+                <div class="detailed-description">
+                    <p class="des">Variables</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./05-quiz1.html" class="level-sidebar__chapter__count">
+                <div class="count__number">05</div>
+                <div class="detailed-description">
+                    <p class="des">QUIZ 1</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./06-comments.html" class="level-sidebar__chapter__count" id="six">
+                <div class="count__number">06</div>
+                <div class="detailed-description">
+                    <p class="des">Comments</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./07-datatyppes.html" class="level-sidebar__chapter__count">
+                <div class="count__number">07</div>
+                <div class="detailed-description">
+                    <p class="des">Data types</p>
+                    <p class="detail"></p>
+                </div>
+            </a>
+            <a href="./08-casting.html" class="level-sidebar__chapter__count" id="eight">
+                <div class="count__number">08</div>
+                <div class="description">casting</div>
+            </a>
+            <a href="./09-strings.html" class="level-sidebar__chapter__count" id="nine">
+                <div class="count__number" style="color: rgb(94, 94, 230); background: rgb(31, 19, 41)">09</div>
+                <div class="description">String</div>
+            </a>
+            <a href="./10-quiz2.html" class="level-sidebar__chapter__count">
+                <div class="count__number">10</div>
+                <div class="description">Quiz 2</div>
+            </a>
+        </div>
+
+        <!-- levels side bar end here -->
+
+        <!-- display username -->
+        <div class="display-user" style="background: blue;">
+            <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
+            <div class="icon"><i class="fa-solid fa-user"></i></div><span style="font-size: large;">Roberto</span>
+        </div>>
+
+        </div>
+        <!-- end of display user name -->
+
+        <!-- account sidebar begins -->
+        <div class="account">
+            <div class="account__xlevels"><i class="fa-solid fa-xmark" id="cross" onclick="closeaccount()"></i> <span>ACCOUNT</span></div>
+            <div class="account__head">Sign out</div>
+
+
+        </div>
+
+        <!-- account sidebar ends here -->
+        <div class="main">
+            <div class="inner-div">
+                <h1 style="margin-bottom: 30px;">
+                    STRINGS
+                </h1>
+                <p>Strings in python are a sequence of characters surrounded by either single 
+                    quotation marks, or double quotation marks. </p>
+                <br>
+                <p>"python" is the same as 'python'</p>
+                <br>
+                <br>
+                <p>Strings can be displayed with the print() function</p>
+                <br>
+                
+                <p>Multi line strings are assigned with three quotes like in the example below</p>
+                
+                <div class="example">
+                    <p><h4>Example of multiline strings</h4></p>
+                    <br>
+                    <!-- <p>Print the data type of the value y</p> -->
+                    <div class="example-inner">
+                        <p>a = """Lorem ipsum dolor sit amet,</p>
+                        <p>consectetur adipiscing elit,</p>
+                        <p>sed do eiusmod tempor incididunt</p>
+                        <p>ut labore et dolore magna aliqua."""</p>
+                        <p>print(a)</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+                <p>The length of a string can be obtained using the len() function</p>
+
+                <br>
+                 Let us try that in the console below.
+                <br>
+                <iframe src="https://trinket.io/embed/python/fa95795d40" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <br>
+
+                <p>We can also combine two or more strings. This is known as concatenation.</p>
+                <br>
+                <p><h3>Strings are arrays</h3></p>
+                <br>
+                <p>Strings store each character(including white space) in an array which represent the byte in unicode.
+                   Therefore, each character in the string can be accesed individually using its index(in square brackets).
+                </p>
+                <br>
+                <p><span style="font-weight: bold; text-decoration: underline;">NB:</span> array indexes start from zero.</p>
+                <br>
+
+                <p>Here is an example</p>
+                
+                <div class="example">
+                    <p><h4>Example of multiline strings</h4></p>
+                    <br>
+                    <!-- <p>Print the data type of the value y</p> -->
+                    <div class="example-inner">
+                        <p>x = "QWERTY"</p>
+                        <p>print(x[2])</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+                <p>The above example will print out "E". Remember, index starts from zero so "Q" wil
+                    have an index of zero,"W" will be at index 1 and then "E" will be at index 2 and so on.
+                </p>
+                <br>
+                <p>Now follow the instruction below to see the demostration of the above in the code editor</p>
+
+                <br>
+                <h3><span style="color: rgb(148, 68, 68);"><u>INSTRUCTION:</u></span> 
+                    change only the value of the index in square brackets and see the various outputs</h3>
+                <br>
+
+                <div>
+                    <label for="inputText">PYTHON EDITOR</label>
+                    <input type="text" class="editor" id="inputText" value="x = 'QWERTY'">
+                        <!-- x = "QWERTY" -->
+                        
+                    <!-- </textarea> -->
+                    <button class="run" onclick="printIndex()">RUN CODE</button>
+                </div>
+                <input type="text" id="InputIndex" value="print(x[2])"> 
+                <br>
+                
+
+                <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">OUTPUT</h2>
+                <div class="console" id="con"></div>
+
+                <br>
+
+                <p style="margin-bottom: 50px;">We realize that as we change the index we obtain different outputs</p>
+                <p>Quiz in the next chapter</p>
+
+
+
+
+
+        </div>
+    </div>
+    <script>
+        // const x = document.querySelector('#cross');
+        const side = document.querySelector('.level-sidebar');
+        const acc = document.querySelector('.account')
+
+        // x.addEventListener('click', closemenu);
+
+        function closemenu(){
+            side.style.display = "none";
+        }
+         
+        function openmenu(){
+            side.style.display = "block";
+        }
+        function closeaccount(){
+            acc.style.display = "none";
+        }
+         
+        function openaccount(){
+            acc.style.display = "block";
+        }
+
+
+        function printIndex(){
+        var editor = document.getElementById("InputIndex").value;
+        var con = document.getElementById("con");
+        
+        var expectedValue0 = "print(x[0])";
+        var expectedValue1 = "print(x[1])";
+        var expectedValue2 = "print(x[2])";
+        var expectedValue3 = "print(x[3])";
+        var expectedValue4 = "print(x[4])";
+        var expectedValue5 = "print(x[5])";
+        
+
+            if(editor === expectedValue0){
+            console.log(editor);
+            con.innerHTML = "Q";
+            con.style.color = "white"
+        }
+        else if(editor === expectedValue1){
+            console.log(editor);
+            con.innerHTML = "W";
+            con.style.color = "white"
+        }
+        else if(editor === expectedValue2){
+            console.log(editor);
+            con.innerHTML = "E";
+            con.style.color = "white"
+        }
+        else if(editor === expectedValue3){
+            console.log(editor);
+            con.innerHTML = "R";
+            con.style.color = "white"
+        }
+        else if(editor === expectedValue4){
+            console.log(editor);
+            con.innerHTML = "T";
+            con.style.color = "white"
+        }
+        else if(editor === expectedValue5){
+            console.log(editor);
+            con.innerHTML = "Y";
+            // alert("run sucessful")
+            con.style.color = "white"
+        }
+        else{
+            console.log("Error: Array Index out of bounds")
+            con.innerHTML = "sytax  error: Array Index out of bounds"
+            con.style.color = "red"
+        }
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
